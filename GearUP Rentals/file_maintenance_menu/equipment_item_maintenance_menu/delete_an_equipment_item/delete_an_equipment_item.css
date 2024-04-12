@@ -1,4 +1,4 @@
-body, h1, p, input, button {
+body, h1, p {
     margin: 0;
     padding: 0;
 }
@@ -32,30 +32,4 @@ h1 {
 p {
     margin-bottom: 20px;
     color: #444444; 
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px; 
-    border: 1px solid #CCCCCC; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #005792; 
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-    box-sizing: border-box; 
-}
-
-button:hover {
-    background-color: #004A76;
 }
