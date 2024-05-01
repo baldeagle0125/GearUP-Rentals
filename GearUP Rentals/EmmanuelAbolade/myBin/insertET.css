@@ -1,0 +1,205 @@
+#html {
+	background-color:#ffffff;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    line-height: 1.6;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	
+	/*Style from menu*/
+	justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+	padding: 20px;
+  }
+
+
+/* Main Content Styles */
+  .fieldset1 {
+    padding: 20px;
+    color: #ffffff/*#333333; /* white text color */
+	
+  }
+
+form{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-content:center;
+	color: #FFFFFF; /* White header text color */
+    width: 1100px; /*sets the form (size)width*/
+    border-radius: 5px; /*sets a round-edged form*/
+    background-color: #004A76; /* Dark blue background */
+	border: 5px solid #f0f0f0;
+    padding: 20px; /* sets form padding*/
+    margin: auto; /* auto positions form centrally*/
+    position: relative;
+	
+}
+
+h3{
+    text-align: center;/*aligns text to center*/
+    font-size :28px; /* White header text color */
+	color: #FFFFFF; /* White text color */
+
+}
+
+h1{
+    text-align: center;/*aligns text to center*/
+    font-size :36px; /* White header text color */;
+	color: #FFFFFF; /* White text color */
+
+}
+
+div{
+	display: flex; /*make display flex*/
+	justify-content: space-between;
+	align-items: center;
+	margin: 0px 5px 10px 5px; /*set margin around display top, right, botoom,left*/
+	
+}
+
+legend{
+    font-size :17px; /* set font size for legend*/
+	text-align : center;
+}
+
+
+input[type=text], input[type=name], input[type=address], input[type=date], input[type=tel]{ /*sets the style for the input type that are for 'text'*/
+    width: 100%;
+    padding: 8px 5px; /*text padding */
+    margin: 5px 0; /* text margin*/
+    
+    border-radius: 3px; /* border degree of curvature where text is inputted*/
+	border-box: red;
+    -webkit-transition: 0.5s;/*change web property compatibilty value smoothly in 0.5seconds*/
+    transition: 0.5s;/*duration of transition while going over drop down web-stored input options */
+    outline: none;/* no outline*/
+}
+
+
+select{ /*sets the style for the input type that are for 'text'*/
+    width: 100%;
+    padding: 8px 5px; /*text padding */
+    margin: 5px 0; /* text margin*/
+    
+    border-radius: 3px; /* border degree of curvature where text is inputted*/
+    -webkit-transition: 0.5s;/*change web property compatibilty value smoothly in 0.5seconds*/
+    transition: 0.5s;/*duration of transition while going over drop down web-stored input options */
+    outline: none;/* no outline*/
+}
+
+
+
+input[type=text] :focus { /* the text type*/
+    
+    border: 50px solid #555;
+}
+
+input[type=button] { /* the button type*/
+    
+    border: 50px solid #555;
+	
+}
+
+#supplierInput{
+	width:30%
+}
+
+
+label { /*set style for the labels*/
+    padding: 12px 12px 12px 0px;
+    display: inline-block; /*in-line dispaly for labels*/
+	width:30%;
+	font-size: 20px; /* Larger font size for headings */
+}
+
+
+
+
+input[type=submit]:hover { /*set the style when cursor hover over the submit button*/
+    background-color: #004A76; /* Darker blue on hover not #45a049;*/
+	transform: translateY(-2px); /* Move button slightly up */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
+
+
+input[type=reset] { /*sets the clear form button*/
+    float: right; /*sets the clear button to the right area of the form*/
+    background-color: #aca9a0; /*set background color for the submit botton to gray*/
+    border: none; /*set no border around the clear button */
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+    text-decoration: none;/*remove any decorations on text*/
+	text-transform: uppercase; /* Uppercase text */
+	letter-spacing: 1px; /* Increased letter spacing */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin: -70px 12px;/*sets the margin around the text*/ 
+    cursor: pointer; /* changes the cursor to a pointer*/
+	border-radius: 5px; /* Rounded corners */
+
+}
+
+
+input[type=submit]{ /*set the style for the submit button*/
+    background-color: #04AA6D; /*set background color for the submit botton to green*/
+    border: none; /* set no border around the submit button*/
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+    text-decoration: none;/*remove any decorations on text*/
+	text-transform: uppercase; /* Uppercase text */
+	letter-spacing: 1px; /* Increased letter spacing */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin: -70px 12px;/*sets the margin around the text*/ 
+	border-radius: 5px; /* Rounded corners */
+    margin: 4px 2px;/*sets top and bottom to 4px padding,  sets left and right padding to 2px i.e space outside the text element*/
+    cursor: pointer;/*sets the cursor to a different pointer when it hovers the submit button*/ 
+}
+
+button{
+	float: left; /*sets the clear button to the right area of the form*/
+    background-color: #005792; /*set background color for the submit botton to gray*/
+    border: none; /*set no border around the clear button */
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* was before 10px 12px;/*sets top and buttom padding i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+    text-decoration: none;/*remove any decorations on text*/
+	text-transform: uppercase; /* Uppercase text */
+	letter-spacing: 1px; /* Increased letter spacing */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin-right: 15px;/*sets the margin around the text*/ 
+    cursor: pointer; /* changes the cursor to a pointer*/
+	border-radius: 5px; /* Rounded corners */
+}
+
+
+.myButton{
+	display: flex; /*make display flex*/
+	/*/justify-content: space-between;*/
+	align-items: center;
+	float: right;
+	//font-size: 30px; /* Larger font size for headings 
+	//margin: 0px 5px 10px 5px; /*set margin around display top, right, botoom,left*/
+}
+
+/* start of style for delete Equipment type form*/
+#message {
+    text-align: center;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* end of style for delete Equipment type form

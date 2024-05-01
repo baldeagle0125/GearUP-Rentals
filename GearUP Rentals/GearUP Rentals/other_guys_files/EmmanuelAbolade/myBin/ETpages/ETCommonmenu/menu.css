@@ -1,0 +1,547 @@
+/* *************************************************************************** 
+*	Name: 				Emmanuel Abolade
+*	Student number:		C00288657
+*	Date: 				08/03/2024
+*	Project:			c2p-equiphire
+*	Task: 				menu.css
+*	Purpose:			General style sheet for GearUpHireEquipment web pages
+******************************************************************************/
+/******************* Menu.php Styles ******************/
+
+/*html style*/
+html {
+	opacity: 0.9; /*set transparency*/
+	padding: 0; /*padding to text set to 0*/
+	text-align:center; /*Text within html set to centre*/	
+}
+
+/*body style*/
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*set text font*/
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text color other than label and input text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 0px;  /*padding around text set to 0*/
+	margin-top: 0px; /*margin at the top of body set to 0*/
+	list-style: none; /* Remove default list styles */
+	
+}
+
+header {
+    background-color: #005792; /* Dark blue header background */
+    color: #FFFFFF; /* White header text color */
+    text-align: center; /*text set to centre for header*/
+    height: auto; /* Adjust height automatically */
+  }
+
+header img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Adjust height automatically */
+  }
+
+/*Style for div in menu.php */
+.menu {
+	font-family: Arial, sans-serif;
+	opacity: 0.9; /*set transparency so that items beneath can be seen slightly*/
+	padding: 0; /*padding around text set to 0*/
+	text-align:center; /*text set to centre for menu*/
+	display: block;/*Wrap content into block */
+	margin: 0;/*margin set to 0*/
+	height: auto; /*Set height to auto*/
+}
+
+/* Style for navigation */
+nav {
+    background-color: #f7ba05; /* Yellow menu background for contrast*/
+    text-align: center; /*text set to centre for menu*/
+    padding: 5px 0; /* Increased padding for better separation */
+	text-align:center; /*text set to centre for menu*/
+	
+  }
+
+/* Style for navigation unordered area*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Style for listed navigation unordered list */
+nav ul li {
+    display: inline-block;/*inline;*/
+    margin: 0px; /* Increased margin for better spacing */
+	cursor: pointer; /*show a pointer cursor over nav*/
+  }
+
+/* Style for the hyperlink navigation  */
+nav ul li a {
+  	text-decoration: none;
+  	font-size:20px; /*text size set bigger for readability*/
+  	justify-content: space-between;
+	display: inline;
+	margin: 0;
+}
+
+.dropbtn {
+    background-color: #f7ba05; /* Yellow menu background */
+    color: #005792; /* Dark blue header background color */
+    font-weight: bold; /* Make text bold */
+    padding: 15px 20px; /* Added padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners for menu items */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Prevents the button from taking full width */
+  }
+
+.dropbtn:hover, .dropdown:hover .dropbtn {
+    background-color: #005792; /* Dark blue header background color */
+    color: #FFFFFF; /* White text color on hover */
+  }
+
+  /* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #005792; /* Dark blue header background color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px; /* Rounded corners */
+  }
+
+.dropdown-content a {
+    color: #FFFFFF; /* White text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold; /* Make text bold */
+    border-radius: 5px; /* Rounded corners for menu items */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+
+.dropdown-content a:hover {
+    background-color: #f7ba05; /* Yellow menu background */
+    color: #005792; /* Dark blue text color on hover */
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/*************************************************************************************************/
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+}
+
+/* LEFT Content - Submenu Section */
+.left-content {
+    width: 20%; /* Set left content width to 20% */
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    text-align: center;
+}
+
+.left-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-content ul li {
+    margin-bottom: 10px; /* Optional: Add spacing between menu items */
+}
+
+.subdropbtn {
+    width: 87%; /* Adjust the width to be a percentage of the aside width */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    padding: 15px; /* Added padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners for menu items */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    display: block; /* Make the button a block-level element */
+    margin-bottom: 10px; /* Optional: Add spacing between buttons */
+}
+
+/* Add hover effect for the aside buttons */
+.subdropbtn:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+
+/* *************************************************************************** */
+/* RIGHT Content - Form */
+.right-content {
+    flex: 1; /* Fill remaining space */
+    padding: 20px; /* Optional: Add padding */
+    display: flex; /* Add flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align children vertically */
+}
+
+.right-content .form-row {
+    margin-bottom: 10px; /* Add space between form rows */
+}
+
+/* Form - Labels Adjustments */
+.right-content label {
+    display: inline-block; /* Display labels as blocks */
+    width: 150px; /* Fixed width for labels */
+    text-align: left; /* Align labels to the right */
+    margin-right: 6px; /* Add space between label and input */
+    font-weight: bold;
+}
+
+/* Form - Input Fields Adjustments */
+.right-content input[type="text"],
+.right-content input[type="email"],
+.right-content input[type="url"] {
+    width: 500px; /* Set width for input fields */
+    padding: 10px; /* Add padding to inputs */
+    border-radius: 5px; /* Rounded corners for featured items */
+    border: 1px solid grey;
+}
+
+/* Buttons of the Form Adjustments */
+.right-content .button {
+    padding: 15px; /* Add padding to inputs */
+    width: calc(50% - 15px); /* Adjust width of buttons */
+    margin: 20px 10px; /* Adjust margin between buttons */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    border: none;
+    border-radius: 5px; /* Rounded corners for menu items */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+}
+
+.right-content .button:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+/* Form bottom buttons in the same row */
+.right-content .button-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Confirmation Message */
+.right-content .Confirmation-msg {
+    text-align: center;
+}
+
+/*  Bottom Form and return Page buttons styles  */
+.right-content input[type="submit"],
+.right-content input[type="reset"] {
+    padding: 15px 30px; /* Adjust padding for the button */
+    font-size: 16px; /* Adjust font size for the button */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+}
+
+/* Hover effect for the Form return Page button */
+.right-content input[type="submit"]:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+.return-button {
+    padding: 20px; /* Increase the padding to make the button larger */
+    font-size: 18px; /* Increase the font size for better readability */
+    /* Add any other specific styling you want for this button */
+}
+
+
+/* *************************************************************************** */
+/* RIGHT Content - Form */
+
+/* Adjust styles for the "Amend Details" button */
+#amendViewbutton {
+    width: 200px;
+	border: 1px solid black; /* Blue border to emphasize */
+	/*margin-left: auto;*/
+    /*display: flex; /* Ensure the button takes full width */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    /*margin: 70px 12px;/*sets the margin around the text*/ 
+	background-color:#005792; /*set background color for the submit botton to dark blue*/
+    border: none; /* set no border around the submit button*/
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+	
+}
+
+#amendviewform {
+    max-width: 700px;
+  	margin: auto;;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */ 
+	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+    border: none; /* set no border around the submit button*/
+    text-align: center;/*aligns text to center*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+	
+}
+
+
+/* Adjust styles for the "Amend Details" button */
+#listbox {
+    
+	
+}
+
+/* Style for select wrapper */
+.select-wrapper {
+    display: flex; /* Use flexbox to arrange items in a row */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 15px; /* Add margin bottom */
+	
+	
+}
+
+/* Style for the div container in ETadd.php */
+.container {
+    display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+	
+}
+
+/* Style for the div container in ETDeleteFullyhtml.php */
+.delcontainer {
+    display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+	
+}
+
+/***************************************************************************************************/
+/******************* input and label Styles ******************/
+
+/*h1 style*/
+h1{
+    text-align: center;/*aligns text to center*/
+    font-size :36px; /* White header text color */;
+	color: #005792; /* White text color */
+	margin: auto; /* auto positions form centrally*/
+	padding: 8px 5px; /*text padding */
+}
+
+
+/*label style*/
+label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin below labels */
+    font-size: 18px; /* Larger font size for labels */
+}
+
+/*style for select and inputs*/
+select, input[type="number"], input[type="text"], input[type="submit"], input[type="reset"], button {
+    width: 70%;
+	align-items: center;
+    padding: 15px;
+    margin-bottom: 20px; /* Increased margin below input fields */
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input fields */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	align-content:center;
+	
+}
+
+/*body style*/
+div{
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+}
+
+/**************Style for Etmenumaintenance.php**************************** */
+.content {
+    text-align: center;
+	list-style: none; /* Remove default list styles */
+	/*max-width: 700px; /*sets maximum width to more than 500px*/
+  	/*margin: auto; /*sets form at centre as long as it is more than 500px*/
+	padding: 20px;
+	margin-bottom: 10px; /* Optional: Add spacing between menu items */
+  }
+
+.ETmenu{ 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text color */
+    display: block;
+	list-style: none; /* Remove default list styles */
+    justify-content:  center; /*space-between; /*center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /*height: 100vh; /* Full viewport height */
+	width: auto;
+	
+
+}
+
+.ETmenuUL {
+    margin-bottom: 50px; /* Increased margin below the menu */
+	max-width: 700px; /*sets maximum width to more than 500px*/
+  	margin: auto; /*sets form at centre as long as it is more than 500px*/
+	display: block;
+	list-style: none; /* Remove default list styles */
+	justify-content:  center; /*space-between; /*center; /* Center horizontally */
+  	align-items: center;
+	align-content:center;
+}
+  
+.a {
+    display: block;
+    padding: 15px 30px;
+    background-color: #005792; /* Dark blue button background */
+    color: #FFFFFF; /* White button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    font-size: 20px; /* Larger font size for menu items */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Increased letter spacing */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+	text-decoration: none; /* Remove underline */
+	list-style: none; /* Remove default list styles */
+    
+  }
+
+.a:hover {
+    background-color: #004A76; /* Darker blue on hover */
+    transform: translateY(-2px); /* Move button slightly up */
+	text-decoration: none; /* Remove underline */
+	list-style: none; /* Remove default list styles */
+    
+  }
+
+
+/************************************Style for forms************************************************/
+
+/*form style*/
+form {
+    max-width: 700px; /* Limit form width */
+    width: 100%; /* Full width */
+	justify-content: center;
+  	align-items: center;
+	align-content:center;
+	position: center;
+	
+}
+
+/*addETform style*/
+#addETform{
+	max-width: 700px; /*sets maximum width to more than 500px*/
+  	margin: auto; /*sets form at centre as long as it is more than 500px*/
+	
+}
+
+/*ETDeleteFullyhtml.php form style*/
+#deleteviewform{
+	max-width: 700px; /*sets maximum width to more than 500px to make auto margin centre the content*/
+  	margin: auto; /*sets form at centre as long as it is more than 500px*/
+	
+}
+
+/*display style for toggle in ETamendviewhtml.php*/
+#display{
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border: none; /* set no border around the submit button*/
+    padding: 15px 30px;/* i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+}
+/*display style in ETadd.php*/
+.display{
+	max-width: 700px; /*sets maximum width to more than 500px*/
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	align-content:center;
+	position: center;
+  	margin: auto; /*sets form at centre as long as it is more than 500px*/
+	
+}
+
+/*input and button hover style*/
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover { /*set the style when cursor hover over the submit button*/
+    background-color: #004A76; /* Darker blue on hover */
+	transform: translateY(-2px); /* Move button slightly up */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+	
+}
+
+/*input and button style*/
+input[type="submit"],input[type="reset"], button { /*set the style for the submit button*/
+    background-color:#005792; /*set background color for the submit botton to dark blue*/
+    border: none; /* set no border around the submit button*/
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+    text-decoration: none;/*remove any decorations on text*/
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin: -70px 12px;/*sets the margin around the text*/ 
+	border-radius: 5px; /* Rounded corners */
+    margin: 4px 2px;/*sets top and bottom to 4px padding,  sets left and right padding to 2px i.e space outside the text element*/
+    cursor: pointer;/*sets the cursor to a different pointer when it hovers the submit button*/ 
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/***************************************************************************************************/
+/******************* footer Styles ******************/
+
+/* Footer Styles */
+footer {
+	background-color: #005792; /* Dark blue footer background */
+	color: #FFFFFF; /* White footer text color */
+	text-align: center;
+	padding: 0px;
+	position: relative;
+	width: 100%;
+	bottom: 0;
+}
+
+footer p {
+	margin-bottom: 10px; /* Increased margin below paragraph */
+}

@@ -1,0 +1,111 @@
+/*
+Name: 			Emmanuel Abolade
+Student number: c00288657
+Date: 			12/02/2024
+Project: 		c2p-equiphire
+Title:			ETstyle.css
+Purpose:		To Style Forms sections that would be completed by user
+*/
+
+
+/*body style*/
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+	margin-top: 10px;
+}
+
+/*body style*/
+h1{
+    text-align: center;/*aligns text to center*/
+    font-size :36px; /* White header text color */;
+	color: #005792; /* White text color */
+	margin: auto; /* auto positions form centrally*/
+	padding: 8px 5px; /*text padding */
+}
+ 
+/*body style*/
+form{
+	
+  	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+	margin: 0px,150px, 0px, 150px;
+	
+}
+
+/*label style*/
+  label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin below labels */
+    font-size: 18px; /* Larger font size for labels */
+  }
+
+/*style for select and inputs*/
+  select, input[type="number"], input[type="text"], input[type="submit"], input[type="reset"], button {
+    width: 100%;
+	align-items: center;
+    padding: 15px;
+    margin-bottom: 20px; /* Increased margin below input fields */
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input fields */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+	align-content:center;
+	/*display: flex;*/
+  }
+
+/*body style*/
+div{
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+	/*margin: 0px,150px, 0px, 150px;*/
+	
+}
+
+form {
+    max-width: 700px; /* Limit form width */
+    width: 100%; /* Full width */
+	justify-content: space-between;
+  	align-items: center;
+	align-content:center;
+	position: center;
+	/*margin: 0px,150px, 0px, 150px;*/
+}
+
+
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover { /*set the style when cursor hover over the submit button*/
+    background-color: #004A76; /*#004A76; /* Darker blue on hover */
+	transform: translateY(-2px); /* Move button slightly up */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+	
+}
+
+
+input[type="submit"],input[type="reset"], button { /*set the style for the submit button*/
+    background-color:#005792; /*#04AA6D; /*set background color for the submit botton to green*/
+    border: none; /* set no border around the submit button*/
+    color: white; /*sets text color to white*/
+    padding: 15px 30px;/* i.e space within the text element*/
+	transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+	font-size: 20px; /* Larger font size for buttons */
+    text-decoration: none;/*remove any decorations on text*/
+	/*text-transform: uppercase; /* Uppercase text */
+	/*letter-spacing: 1px; /* Increased letter spacing */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Text shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    margin: -70px 12px;/*sets the margin around the text*/ 
+	border-radius: 5px; /* Rounded corners */
+    margin: 4px 2px;/*sets top and bottom to 4px padding,  sets left and right padding to 2px i.e space outside the text element*/
+    cursor: pointer;/*sets the cursor to a different pointer when it hovers the submit button*/ 
+	box-sizing: border-box; /* Include padding and border in element's total width and height */
+}

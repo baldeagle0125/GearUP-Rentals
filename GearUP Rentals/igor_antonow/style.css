@@ -1,0 +1,124 @@
+body, h1, p, input, select, option, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333333; /* Dark gray text color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: stretch; /* Center vertically */
+    height: 120vh; /* Full viewport height */
+  }
+
+  h1 {
+    font-size: 36px; /* Larger font size for headings */
+    margin-bottom: 30px; /* Increased margin below heading */
+    color: #005792; /* Dark blue heading color */
+    text-align: center; /* Center the heading */
+    width: 100%; /* Full width */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin below labels */
+    font-size: 18px; /* Larger font size for labels */
+  }
+
+  select, input, a[class=button] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px; /* Increased margin below input fields */
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input fields */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+  .button {
+    width: 100%;
+    padding: 15px;
+    background-color: #005792; /* Dark blue button background */
+    color: #FFFFFF; /* White button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    font-size: 18px; /* Font size for button */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button:hover {
+    background-color: #004A76; /* Darker blue on hover */
+  }
+
+  .button:disabled {
+    background-color: grey;
+  }
+
+  .form-container {
+    max-width: 1000px; /* Limit form width */
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 600px;
+  }
+
+  p {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    gap: 5px
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+input {
+  width: 450px;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  width: 600px;
+  table-layout: fixed;
+}
+
+.radio {
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+input[class=radio] {
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}

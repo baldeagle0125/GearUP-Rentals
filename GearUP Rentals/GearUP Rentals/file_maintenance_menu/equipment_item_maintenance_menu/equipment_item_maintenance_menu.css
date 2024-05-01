@@ -1,0 +1,81 @@
+/*
+   File name: equipment_item_maintenance_menu.css
+   File purpose: CSS file for equipment_item_maintenance_menu.php
+   Student ID: C00290950
+   Student name: Ihor Melashchenko
+*/
+
+/* Resetting default margin and padding for body, h1, and button elements */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center; 
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Styling for the main content */
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 36px; 
+    margin-bottom: 20px; 
+    color: #005792;
+}
+
+/* Container for buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for buttons */
+button {
+    width: 100%;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    background-color: #005792;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #004A76;
+}
+
+/* Styling for the return button */
+button[name="return"] {
+    background-color: transparent;
+    border: 2px solid #005792; 
+    color: #005792;
+    padding: 10px 0px; 
+    margin-bottom: 10px; 
+    transition: border-color 0.3s ease, color 0.3s ease; 
+}
+
+button[name="return"]:hover {
+    background-color: #005792; 
+    color: #FFFFFF; 
+}

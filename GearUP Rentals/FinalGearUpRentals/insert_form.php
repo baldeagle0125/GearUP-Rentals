@@ -1,0 +1,57 @@
+<!--
+//Student Name: Ihor Antonov
+//Student No. : C00291296
+//Created on  : 07/02/2024
+-->
+<!--This file contains simple html form copied and modified from lab 3-->
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<html>
+    <body>
+        <script src="validate.js"></script>
+        <?php include("./header.html"); ?>
+        <div class="content">
+            <form action="insert.php" method="post" name="form" onsubmit="return validate()">
+                <h1>Add a Customer</h1>
+                <p>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" id="surname" placeholder="Surname" autocomplete="off" required>
+                </p>
+
+                <p>
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Firstname" autocomplete="off" required>
+                </p>
+
+                <p>
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                </p>
+
+                <p>
+                    <label for="eircode">Eircode</label>
+                    <input type="text" name="eircode" id="eircode" placeholder="eircode" autocomplete="off" required>
+                </p>
+
+                <p>
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone Number" pattern="^[\d\s]*$"> <!--the regexp means "zero or more nums or spaces from start to end of string"-->
+                </p>
+
+                <p>
+                    <label for="creditlimit">Credit Limit</label>
+                    <input type="number" name="creditlimit" id="creditlimit" placeholder="0">
+                </p>
+
+                <br>
+
+                <p>
+                    <input class="button" type="submit" value="Submit">
+                    <input class="button" type="reset" value="Clear">
+                    <a class="button" href="./../menu.html">Back to Menu</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

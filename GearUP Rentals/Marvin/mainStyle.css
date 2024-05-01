@@ -1,0 +1,190 @@
+/* CSS styles */
+
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 100px); /* Adjust based on your footer height */
+	
+}
+
+/* CSS code to make placeholder text italic */
+.right-content input::placeholder {
+    font-style: italic;
+}
+
+/* *************************************************************************** */
+/* LEFT Content - Submenu Section */
+.left-content {
+    width: 20%; /* Set left content width to 20% */
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    text-align: center;
+}
+
+.left-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-content ul li {
+    margin-bottom: 10px; /* Optional: Add spacing between menu items */
+}
+
+.subdropbtn {
+    width: 87%; /* Adjust the width to be a percentage of the aside width */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    padding: 15px; /* Added padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners for menu items */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    display: block; /* Make the button a block-level element */
+    margin-bottom: 10px; /* Optional: Add spacing between buttons */
+}
+
+/* Add hover effect for the aside buttons */
+.subdropbtn:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+
+/* *************************************************************************** */
+/* RIGHT Content - Form */
+.right-content {
+    flex: 1; /* Fill remaining space */
+    padding: 20px; /* Optional: Add padding */
+    display: flex; /* Add flexbox layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align children vertically */
+}
+
+.right-content .form-row {
+    margin-bottom: 10px; /* Add space between form rows */
+}
+
+/* Form - Labels Adjustments */
+.right-content label {
+    display: inline-block; /* Display labels as blocks */
+    width: 150px; /* Fixed width for labels */
+    text-align: left; /* Align labels to the right */
+    margin-right: 6px; /* Add space between label and input */
+    font-weight: bold;
+}
+
+/* Form - Input Fields Adjustments */
+.right-content input[type="text"],
+.right-content input[type="email"],
+.right-content input[type="url"] {
+    width: 500px; /* Set width for input fields */
+    padding: 10px; /* Add padding to inputs */
+    border-radius: 5px; /* Rounded corners for featured items */
+    border: 1px solid grey;
+}
+
+/* Buttons of the Form Adjustments */
+.right-content .button {
+    padding: 15px; /* Add padding to inputs */
+    width: calc(50% - 15px); /* Adjust width of buttons */
+    margin: 20px 10px; /* Adjust margin between buttons */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    border: none;
+    border-radius: 5px; /* Rounded corners for menu items */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+}
+
+.right-content .button:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+/* Form bottom buttons in the same row */
+.right-content .button-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Confirmation Message */
+.right-content .Confirmation-msg {
+    text-align: center;
+}
+
+/*  Bottom Form and return Page buttons styles  */
+.right-content input[type="submit"],
+.right-content input[type="reset"] {
+    padding: 15px 30px; /* Adjust padding for the button */
+    font-size: 16px; /* Adjust font size for the button */
+    background-color: #005792; /* Dark blue Button background color */
+    color: #FFFFFF; /* White text color */
+    font-weight: bold; /* Make text bold */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+}
+
+/* Hover effect for the Form return Page button */
+.right-content input[type="submit"]:hover {
+    background-color: #003d63; /* Darker blue on hover */
+}
+
+.return-button {
+    padding: 20px; /* Increase the padding to make the button larger */
+    font-size: 18px; /* Increase the font size for better readability */
+    /* Add any other specific styling you want for this button */
+}
+
+
+
+/* *************************************************************************** */
+/* RIGHT Content - Form */
+
+/* Adjust styles for the "Amend Details" button */
+#amendViewbutton {
+    width: auto;
+	border: 1px solid black; /* Blue border to emphasize */
+	color:  #f7ba05; /* Yellow menu background for contrast*/
+	
+}
+
+/* Style for select wrapper */
+.select-wrapper {
+    display: flex; /* Use flexbox to arrange items in a row */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 15px; /* Add margin bottom */
+	
+	
+}
+
+/* Style for the select box */
+select {
+    width: 55%; /* Adjust width as needed */
+    padding: 14px; /* Adjust padding */
+    font-size: 16px;
+    border: 1px solid black; /* Black border to emphasize */
+	font-weight: bold; /* Make text bold */
+    border-radius: 5px;
+    box-sizing: border-box;
+	background-color: #d9ebf2;  /* Light Blue background to emphasize user to click*/
+	margin-left: 5px;
+}
+
+/* Push the "Amend Details" button to the right */
+#amendViewbutton {
+    margin-left: auto;
+    display: block; /* Ensure the button takes full width */
+}
+

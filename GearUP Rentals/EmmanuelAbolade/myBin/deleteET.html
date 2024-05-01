@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Name: Emmanuel Abolade
+Student number: c00288657
+Date: 12/02/2024
+Project: c2p-equiphire
+--> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Equipment Type</title>
+    <link rel="stylesheet" href="insertET.css"><!--link to external style sheet called ET.css-->
+</head>
+<body>
+	
+	<!--form field-->
+    <form id="deleteETForm" action="process_delete.php" method="post"> <!--name = "deleteETForm" action="delete_equipment_type.php" method="post">-->
+		<h1>DELETE AN EQUIPMENT TYPE</h1> <!--Form title-->
+        <fieldset class="fieldset1">
+			<legend><h3>Equipment type details</h3></legend>
+		
+		<!-- Equipment type id field -->
+            <div class="inputbox"> <!--div to style inputbox-->
+        <label for="equipment-type">Select Equipment Type by ID:</label>
+        <select id="equipment_Type" name="equipment_type" required>
+			<!--<option>----Choose an Equipment Type ID----</option>-->
+            <!-- Options will be populated dynamically using JavaScript -->
+			<?php
+            // Retrieve equipment types from the database
+            $sql = "SELECT id, description, brand FROM equipment_type WHERE is_deleted = 0";
+            $result = $con->query($sql);
+
+            // Display equipment types in the dropdown list
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='{$row['id']}'>{$row['description']} - {$row['brand']}</option>";
+                }
+            } else {
+                echo "<option value=''>No equipment types available</option>";
+            }
+            ?>
+        </select>
+			</div>
+		<!-- Buttons field-->
+			<div class="myButton"> <!--div to style myButton-->
+				<button onclick="window.location.href = 'menuETmaintenance.html';">Back to Equipment Type Maintenance Menu</button>
+				
+        		<input type="submit" value="Delete Equipment Type" name="submit" /><br><br>
+				
+                <input type="reset" value="Clear all fields" name="reset" />
+				
+				
+			</div>
+	<!--	<script>
+					document.getElementById("deleteETForm").addEventListener("submit", function(event) {
+  					var confirmation = confirm("Are you sure you want to continue?");
+  					if (!confirmation) {
+    					event.preventDefault();
+  						}
+					});
+		</script>  -->
+			</fieldset>
+    </form>
+
+   <!-- <div id="equipmentDetails" class="hidden">
+        <h2>Equipment Type Details deleted</h2>
+        <!-- Details will be displayed here dynamically using JavaScript 
+    </div> -->
+
+    <!--<script src="delETscript.js"></script>-->
+	
+	
+	<!--<script src="deleteETscript.js"></script>-->
+    
+	
+</body>
+</html>

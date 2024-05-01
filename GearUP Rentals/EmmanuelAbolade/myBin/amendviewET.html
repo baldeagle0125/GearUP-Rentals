@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amend/View Equipment Type</title>
+    <link rel="stylesheet" href="insertET.css">
+</head>
+<body>
+    
+	<!--form field-->
+    <form id="search-form">
+		<h1>AMEND/VIEW AN EQUIPMENT TYPE</h1>
+		<!-- Equipment type search field -->
+            <div class="inputbox"> <!--div to style inputbox-->
+        <label for="search">Search Equipment Type:</label>
+        <input type="text" id="search" name="search">
+        <button type="button" id="find-button">Find</button>
+				</div>
+    </form>
+	
+		
+    <form id="equipment-details-form">
+        <label for="equipment-type">Select Equipment Type:</label>
+        <select id="equipment-type" name="equipment-type">
+            <!-- Options will be dynamically populated using JavaScript -->
+        </select><br>
+	</form>
+		<fieldset class="fieldset1">
+		<legend><h3 style="color: #004A76">Equipment type details</h3></legend>
+			
+	<form id="equipment-details-form">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" disabled><br>
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" disabled><br>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" disabled><br>
+        <label for="supplier">Supplier:</label>
+        <input type="text" id="supplier" name="supplier" disabled><br>
+        <label for="catalogue_code">Supplier's Catalogue Code:</label>
+        <input type="text" id="catalogue_code" name="catalogue_code" disabled><br>
+        <label for="rental_cost_per_day">Rental Cost per Day:</label>
+        <input type="number" id="rental_cost_per_day" name="rental_cost_per_day" min="0" step="0.01" disabled><br>
+		
+			<div class="inputbox"> <!--div to style inputbox-->
+        <button type="button" id="first-button">First</button>
+        <button type="button" id="prev-button">Previous</button>
+        <button type="button" id="next-button">Next</button>
+        <button type="button" id="last-button">Last</button><br>
+        <button type="button" id="amend-button">Amend</button>
+        <button type="submit" id="save-button" disabled>Save Changes</button>
+			</div>
+		
+    </form>
+	</fieldset>
+    <script src="scripts.js"></script>
+    <script>
+        // Fetch all equipment types from server
+        fetch('fetch_all_equipment_types.php')
+            .then(response => response.json())
+            .then(data => populateEquipmentTypes(data))
+            .catch(error => console.error('Error fetching equipment types:', error));
+
+        // Function to populate equipment types in select box
+        function populateEquipmentTypes(types) {
+            const selectBox = document.getElementById('equipment-type');
+            types.forEach(type => {
+                const option = document.createElement('option');
+                option.value = type.type_id;
+                option.textContent = type.description;
+                selectBox.appendChild(option);
+            });
+        }
+
+        // Find button click event listener
+        document.getElementById('find-button').addEventListener('click', function() {
+            const searchQuery = document.getElementById('search').value;
+            // Fetch equipment types matching search query
+            fetch(`search_equipment_types.php?search=${searchQuery}`)
+                .then(response => response.json())
+                .then(data => populateEquipmentTypes(data))
+                .catch(error => console.error('Error searching equipment types:', error));
+        });
+
+        // Amend button click event listener
+        document.getElementById('amend-button').addEventListener('click', function() {
+            enableFormFields(true);
+        });
+
+        // Save button click event listener
+        document.getElementById('save-button').addEventListener('click', function() {
+            const confirmation = confirm("Do you want to keep these changes?");
+            if (confirmation) {
+                // Code to save changes goes here
+                alert("Changes saved successfully.");
+                enableFormFields(false);
+            }
+        });
+
+        // Function to enable/disable form fields
+        function enableFormFields(enabled) {
+            const form = document.getElementById('equipment-details-form');
+            const inputs = form.querySelectorAll('input, select');
+            inputs.forEach(input => {
+                input.disabled = !enabled;
+            });
+            document.getElementById('save-button').disabled = !enabled;
+        }
+    </script>
+</body>
+</html>
